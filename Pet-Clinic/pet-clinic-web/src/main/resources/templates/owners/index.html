@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List of Owners</title>
+</head>
+<body>
+<!--/*@thymesVar id ="owner" type="src.main.java.com.springboot.pet.model.Owner"*/-->
+<h1 th:text="'List of owners'">List of Owners...</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="owner:${owners}">
+    <td  th:text="${owner.id}">1</td>
+    <td th:text="${owner.firstName}">"pradeep"</td>
+        <td th:text="${owner.lastName}">"parsam"</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
